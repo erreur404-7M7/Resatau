@@ -1,0 +1,21 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Suivi -Saveurs de Taroudant% endblock %}
+{% block body %}
+<div class="container">
+    {{response}}
+    <div class="col my-4">
+
+        <h2>État du paiement concernant votre Id de commande {{response.ORDERID}}</h2>
+        {% if response.RESPCODE == '01' %}
+        COMMANDE RÉUSSIE
+        {% else %}
+        COMMANDE REFUSEE
+        {% endif%}
+        ---------+
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+</script>
+{% endblock %}
